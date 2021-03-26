@@ -1,0 +1,464 @@
+@font-face {
+  font-family: Whitney;
+  font-weight: 300;
+  src: url(https://discordapp.com/assets/6c6374bad0b0b6d204d8d6dc4a18d820.woff)
+    format("woff");
+}
+
+@font-face {
+  font-family: Whitney;
+  font-weight: 400;
+  src: url(https://discordapp.com/assets/e8acd7d9bf6207f99350ca9f9e23b168.woff)
+    format("woff");
+}
+
+@font-face {
+  font-family: Whitney;
+  font-weight: 500;
+  src: url(https://discordapp.com/assets/3bdef1251a424500c1b3a78dea9b7e57.woff)
+    format("woff");
+}
+
+@font-face {
+  font-family: Whitney;
+  font-weight: 600;
+  src: url(https://discordapp.com/assets/be0060dafb7a0e31d2a1ca17c0708636.woff)
+    format("woff");
+}
+
+@font-face {
+  font-family: Whitney;
+  font-weight: 700;
+  src: url(https://discordapp.com/assets/8e12fb4f14d9c4592eb8ec9f22337b04.woff)
+    format("woff");
+}
+
+html {
+  background-color: #36393f;
+  color: #dcddde;
+  font-family: "Whitney", sans-serif;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus,
+span:focus,
+a:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+code {
+  background-color: #202225;
+  line-height: 1.125rem;
+  width: auto;
+  height: auto;
+  padding: 0.2em;
+  margin: -0.2em 0;
+  border-radius: 3px;
+  font-size: 85%;
+  font-family: Consolas, Andale Mono WT, Andale Mono, Lucida Console,
+    Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono,
+    Liberation Mono, Nimbus Mono L, Monaco, Courier New, Courier, monospace;
+  text-indent: 0;
+  border: none;
+  white-space: pre-wrap;
+}
+
+.loader {
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader svg {
+  transform: scale(10);
+}
+
+.logo {
+  fill: #7289da;
+}
+
+.logo-text {
+  animation: Text 3s linear infinite;
+}
+
+.content {
+  display: none;
+  width: 50%;
+  margin: auto;
+  padding: 10px;
+  line-height: 1.4;
+}
+
+header {
+  text-align: center;
+}
+
+header h3,
+header h1 {
+  margin: 10px;
+  color: #7289da;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #b9bbbe;
+}
+
+.interactive {
+  -webkit-transition: background-color 50ms ease-out, color 50ms ease-out;
+  transition: background-color 50ms ease-out, color 50ms ease-out;
+  cursor: pointer;
+}
+
+.channel {
+  border-radius: 3px;
+  padding: 2px;
+  font-weight: 500;
+  color: #7289da;
+  background: rgba(114, 137, 218, 0.1);
+}
+
+.channel:hover {
+  background: #7289da;
+  color: white;
+}
+
+#discordData,
+#discordInfo {
+  display: flex;
+  height: 50px;
+}
+
+#callToAction,
+#callToAction-clicked {
+  bottom: 0;
+  cursor: pointer;
+  height: 40px;
+  left: 0;
+  min-height: 32px;
+  min-width: 73px;
+  position: relative;
+  right: 0;
+  top: 0;
+  align-self: center;
+  margin: 0 0 0 10px;
+  padding: 2px 16px;
+}
+
+#buttonText,
+#introText,
+#serverNameBox,
+#status {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#discordInviteBox {
+  background-color: #37393e;
+  display: inline-block;
+}
+
+#discordInvite {
+  text-align: left;
+  box-sizing: border-box;
+  color: #fff;
+  background: rgba(47, 49, 54, 0.6);
+  border: 1px solid rgba(47, 49, 54, 0.9);
+  border-radius: 3px;
+  font: normal normal 400 normal 16px/16px Whitney, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  margin: 0;
+  padding: 10px 15px 10px 10px;
+  display: inline-block;
+}
+
+#offlineInd,
+#onlineInd {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  margin: 0 4px 0 0;
+  display: block;
+}
+
+#introText {
+  color: #b9bbbe;
+  height: 16px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  flex: 1 1 0%;
+  font: normal normal 600 normal 12px/16px Whitney, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  margin: 0 0 8px;
+}
+
+#serverImg {
+  background-position: 50% 50%;
+  bottom: 0;
+  cursor: pointer;
+  height: 50px;
+  left: 0;
+  position: relative;
+  right: 0;
+  top: 0;
+  width: 50px;
+  border-radius: 15px;
+  flex: 0 0 auto;
+  margin: 0 10px 0 0;
+}
+
+#discordInviteError {
+  background-color: red;
+  color: #fff;
+}
+
+#discordInfo {
+  align-items: stretch;
+  justify-content: center;
+  flex: 1 1 auto;
+  flex-flow: column nowrap;
+}
+
+#callToAction,
+#statusIndicators {
+  align-items: center;
+  display: flex;
+}
+
+#serverNameBox {
+  color: #f6f6f7;
+  cursor: pointer;
+  height: 20px;
+  font: normal normal 600 normal 16px/20px Whitney, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  margin: 0 0 4px;
+}
+
+#serverNameBox:hover {
+  text-decoration: underline;
+}
+
+#status,
+#statusIndicators {
+  font: normal normal 600 normal 12px/16px Whitney, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  color: #72767d;
+  height: 16px;
+}
+
+#statusIndicators {
+  justify-content: flex-start;
+}
+
+#onlineInd {
+  color: #72767d;
+  column-rule-color: #72767d;
+  background: #43b581;
+  font: italic normal 600 normal 12px/16px Whitney, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+}
+
+#numOnline {
+  color: #72767d;
+  display: block;
+  height: 16px;
+  font: normal normal 600 normal 12px/16px Whitney, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  margin: 0 8px 0 0;
+}
+
+#offlineInd {
+  color: #72767d;
+  background: #747f8d;
+  font: italic normal 600 normal 12px/16px Whitney, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+}
+
+#numTotal {
+  color: #72767d;
+  display: block;
+  height: 16px;
+  font: normal normal 600 normal 12px/16px Whitney, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+}
+
+#callToAction {
+  color: #fff;
+  border: 0;
+  justify-content: center;
+  background: #43b581;
+  border-radius: 3px;
+  font: normal normal 500 normal 14px/20px Whitney, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  transition: background-color 0.17s ease 0s;
+}
+
+#callToAction:hover {
+  background-color: #3ca374;
+}
+
+#callToAction-clicked {
+  color: #dcddde;
+  display: flex;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(114, 118, 126, 0.298);
+  border-radius: 3px;
+  font: normal normal 500 normal 14px/20px Whitney, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  transition: color 0.17s ease 0s, background-color 0.17s ease 0s,
+    border-color 0.17s ease 0s;
+}
+
+#discordPoly,
+#gDiscord {
+  white-space: nowrap;
+  word-wrap: break-word;
+  column-rule-color: #dcddde;
+  user-select: none;
+  fill: none;
+  border: 0 #dcddde;
+  overflow-wrap: break-word;
+  cursor: pointer;
+  text-align: center;
+  font: normal normal 500 normal 14px/20px Whitney, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+}
+
+#callToAction-clicked:hover {
+  border-color: hsla(218, 5%, 47%, 0.6);
+}
+
+#discordSVG {
+  color: #dcddde;
+  height: 18px;
+  width: 18px;
+  margin: 0 0 0 8px;
+}
+
+#gDiscord {
+  fill-rule: evenodd;
+}
+
+#discordPoly {
+  text-decoration: none solid #dcddde;
+  fill-rule: evenodd;
+  stroke: #dcddde;
+  stroke-width: 2px;
+  caret-color: #dcddde;
+  outline: #dcddde 0;
+}
+
+#joinedDiscord {
+  color: #dcddde;
+  cursor: pointer;
+  display: flex;
+  height: 20px;
+  overflow-wrap: break-word;
+  text-align: center;
+  font: normal normal 500 normal 14px/20px Whitney, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  overflow: hidden;
+}
+
+#buttonText {
+  cursor: pointer;
+  display: flex;
+  height: 20px;
+  text-align: center;
+  font: normal normal 500 normal 14px/20px Whitney, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  margin: 0 8.83px;
+}
+
+.loadHidden {
+  display: none;
+}
+
+.emoji {
+  height: 21px;
+  margin-bottom: -5px;
+}
+
+.spoiler {
+  background-color: #202225;
+  color: #202225;
+  cursor: pointer;
+  border-radius: 3px;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  line-height: 1.125rem;
+  width: auto;
+  height: auto;
+  padding: 0.2em;
+  margin: -0.2em 0;
+  border-radius: 3px;
+  font-size: 85%;
+  text-indent: 0;
+  border: none;
+  white-space: pre-wrap;
+}
+
+.spoiler .emoji {
+  visibility: hidden;
+}
+
+.open-spoiler {
+  background-color: hsla(0, 0%, 100%, 0.1);
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  font-size: smaller;
+}
+
+@media (max-width: 1000px) {
+  .content {
+    width: 75%;
+  }
+}
+
+@media (max-width: 600px) {
+  #status {
+    display: none !important;
+  }
+  #discordInvite {
+    width: 100% !important;
+  }
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+}
+body::-webkit-scrollbar-track {
+  background: #202225;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #575b64;
+  border-radius: 20px;
+}
